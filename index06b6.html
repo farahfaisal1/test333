@@ -1,0 +1,13 @@
+<div class='form-caption'>طلباتي السابقة</div><div class='form-unit'><div class='form-unit-title'> رقم الجوال </div> <div class='form-unit-field'> <label for='phone'><input type='tel' value="" name='phone' id='phone' placeholder=''  required autocomplete='off'>  </label></div> </div><div class='text-center' style='padding-top: 10px;'> 
+                <button onclick='checkOrder()' type='button' class='button button-medium button-style-success-dark' >متابعة</button>
+                 </div>
+                
+                <script>
+                function checkOrder(){
+                   $('#modal-content').load('./?app=order.history.check&phone=' + $('#phone').val()  ); 
+                }
+          
+                $('#phone').on('keydown', function(e) {
+                if (e.key === 'Enter') checkOrder(); });
+                </script>
+            
